@@ -1,0 +1,10 @@
+[Unit]
+Description=WebVirtMgr Gunicorn Server
+After=network.target
+ 
+[Service]
+WorkingDirectory=/var/www/html/webvirtmgr
+ExecStart=/usr/bin/python /var/www/html/webvirtmgr/manage.py run_gunicorn -c /var/www/html/webvirtmgr/conf/gunicorn.conf.py
+ 
+[Install]
+WantedBy=multi-user.target

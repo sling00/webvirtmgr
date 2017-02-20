@@ -1,0 +1,10 @@
+[Unit]
+Description=WebVirtMgr NoVNC proxy
+After=network.target
+
+[Service]
+ExecStart=/var/www/html/webvirtmgr/console/webvirtmgr-console
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
